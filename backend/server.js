@@ -17,6 +17,3 @@ const PORT = process.env.PORT
 app.use('/',(req,res) => res.send('Hey'))
 
 app.listen(PORT, console.log(`Portfolio running on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.underline))
-
-
-
