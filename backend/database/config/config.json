@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "",
-    "password": "",
+    "username": "manulangat",
+    "password": "3050manu",
     "database": "db_pot",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",

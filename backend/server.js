@@ -5,7 +5,7 @@ import path from 'path'
 import morgan from 'morgan'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-
+import routes from './routes'
 
 dotenv.config()
 const app = express()
@@ -17,6 +17,15 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 if (process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'))
 }
+// import and load routes 
+app.use('/',routes)
+
+
+app.use('*', (req, res) => {
+    res.status(404).send({
+      message: 'Url not found'
+    })
+  })
 const PORT = process.env.PORT 
 
 app.use('/',(req,res) => res.send('Hey'))
