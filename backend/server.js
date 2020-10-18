@@ -6,8 +6,11 @@ import morgan from 'morgan'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import routes from './routes'
-
 dotenv.config()
+
+import { handleError,ErrorHandler} from './helpers/errors/error'
+
+
 const app = express()
 
 app.use(cors())
@@ -29,5 +32,10 @@ app.use('*', (req, res) => {
 const PORT = process.env.PORT 
 
 app.use('/',(req,res) => res.send('Hey'))
+
+// error middleware
+app.use((err, req, res, next) => {
+  handleError(err, res);
+});
 
 app.listen(PORT, console.log(`Portfolio running on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.underline))
