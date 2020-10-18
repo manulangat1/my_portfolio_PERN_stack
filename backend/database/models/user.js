@@ -24,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     isActive:{
       type:DataTypes.BOOLEAN
+    },
+    isAdmin:{
+      type:DataTypes.BOOLEAN
     }
   }, {
     sequelize,

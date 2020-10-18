@@ -19,6 +19,12 @@ module.exports = {
       },
       isActive:{
         type:Sequelize.BOOLEAN,
+        defaultvalue:false,
+        allowNull:false
+      },
+      isAdmin:{
+        type:Sequelize.BOOLEAN,
+        defaultvalue:false,
         allowNull:false
       },
       createdAt: {
