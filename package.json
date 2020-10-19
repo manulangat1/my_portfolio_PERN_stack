@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon --exec babel-node server.js",
-    "start": "node server.js"
+    "server": "nodemon --exec babel-node ./backend/server.js",
+    "start": "node backend/server.js"
   },
   "author": "EMMANUEL KIPCHIRCHIR LANGAT",
   "license": "MIT",
