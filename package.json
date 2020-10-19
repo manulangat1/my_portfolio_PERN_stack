@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "server": "nodemon --exec babel-node ./backend/server.js",
-    "start": "node backend/server.js"
+    "start": "node --experimental-modules  backend/server.js"
   },
   "author": "EMMANUEL KIPCHIRCHIR LANGAT",
   "license": "MIT",
