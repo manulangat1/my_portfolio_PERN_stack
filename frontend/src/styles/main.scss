@@ -1,10 +1,58 @@
+@import 'config';
+
+
+// base styles 
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior:smooth;
 }
+main{
+    min-height: calc(100vh - 70px);
+}
+.container{
+    max-width: 950px;
+    margin:auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    margin:0;
+}
+ul {
+    
+    li{
+        list-style: none;
+        display: inline;
+        padding: 1rem;
+        align-items: flex-end;
+    }
+} 
+//header 
 header{
     min-height: 70px;
     width:100%; 
+    background-color: $header-color;
+    color:set-text-color($header-color);
+    padding: 1rem;
+    .grids{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 }
+
+//footer 
+footer{
+    height: 70px;
+    background-color: $header-color;
+    color:set-text-color($header-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+
+@import 'mobile';
