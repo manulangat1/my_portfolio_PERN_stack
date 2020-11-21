@@ -5,9 +5,9 @@ import React from 'react';
 class Projects extends React.Component{
     render(){
         return(
-            <section id="contact" >
+            <section id="projects" >
                 <div className="container">
-                <h1>Projects</h1>
+                <h1>This page is still a work progress!!</h1>
                 </div>
             </section>
 

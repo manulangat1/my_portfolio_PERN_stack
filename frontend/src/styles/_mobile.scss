@@ -1,0 +1,38 @@
+@include mediaSm{
+    *{
+        text-align: center;
+        align-items: center;
+    }
+    header{
+        .web-links{
+            display: none;
+        }
+    }
+}
+@include mediaMd{
+    *{
+        text-align: center;
+        align-items: center;
+    }
+    header{
+        .web-links{
+            display: none;
+        }
+    }
+}
+
+@include mediaLg{
+    header{
+        .mobile-links{
+            display: none;
+        }
+    }
+}
+
+@include medialg{
+    header{
+        .mobile-links{
+            display: none;
+        }
+    }
+}
