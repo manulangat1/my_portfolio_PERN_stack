@@ -8,7 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      image: {
+        type: Sequelize.STRING
+      },
       title: {
+        type: Sequelize.STRING
+      },
+      content: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      githubLink: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      liveLink: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {

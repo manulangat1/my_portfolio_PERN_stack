@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   About.init({
-    title: DataTypes.STRING
+    title: DataTypes.STRING,
+    content:DataTypes.STRING,
+    email:DataTypes.STRING,
+    phoneNumber:DataTypes.STRING,
+    quote:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'About',

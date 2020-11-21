@@ -1,0 +1,5 @@
+export const FETCH_HOME="FETCH_HOME"
+export const FETCH_ABOUT="FETCH_ABOUT"
+export const  FETCH_PROJECTS = "FETCH_PROJECTS"
+export const  FETCH_BLOG = "FETCH_BLOG"
+export const  FETCH_BLOG_BY_SLUG = "FETCH_BLOG_BY_SLUG"
