@@ -16,7 +16,7 @@ class Home extends React.Component{
                        this.props.home && this.props.home.map(h => (
                             <div key={h.id}>
                                 <h1>Hi, I am <span className="uname">{h.title}</span> .</h1>
-                                <p><Typewriter options={{ strings: ['A Software Engineer', 'A Programmer','A Pythonista','A data scientist'], autoStart: true,loop: true,}}
+                                <p><Typewriter options={{ strings: ['A Software Engineer . . .', 'A Programmer . . .','A Pythonista . . .','A data scientist . . .'], autoStart: true,loop: true,}}
 /></p>
 
                             </div>

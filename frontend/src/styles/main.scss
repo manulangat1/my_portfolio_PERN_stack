@@ -255,7 +255,8 @@ header{
         font-size: 1.7rem;
     }
     padding: 1.5rem;
-    background: lighten($header-color,2);
+    // background: lighten($header-color,2);
+    background:repeating-linear-gradient(45deg, rgb(27, 27, 27) 0px, rgb(27, 27, 27) 97px,rgb(24, 24, 24) 97px, rgb(24, 24, 24) 194px,rgb(20, 20, 20) 194px, rgb(20, 20, 20) 291px);
 
     min-height: 90vh;
     font-weight: 400;
@@ -285,9 +286,20 @@ header{
 
 #projects{
     background:#f7f7f7;
-    min-height: 70vh;
-    .container{
-        // margin-top: 7vh;
+    min-height: 100vh;
+    padding:3rem;
+    .heading-sm{
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    img{
+      max-width: 100%;
+    max-height: 100%;
+    }
+    .gridp{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 1rem;
     }
     
 }

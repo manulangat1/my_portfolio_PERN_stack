@@ -8,6 +8,11 @@
             display: none;
         }
     }
+    #projects{
+        .gridp{
+            grid-template-columns: 1fr;
+        }
+    }
 }
 @include mediaMd{
     *{
@@ -17,6 +22,11 @@
     header{
         .web-links{
             display: none;
+        }
+    }
+    #projects{
+        .gridp{
+            grid-template-columns: 1fr;
         }
     }
 }
