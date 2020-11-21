@@ -9,7 +9,7 @@ class About extends React.Component{
     }
     render(){
         return(
-            <section id="home">
+            <section id="about">
                 <div className="container">
                 {
                     this.props.about.map(ab => (

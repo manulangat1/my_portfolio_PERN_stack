@@ -189,6 +189,7 @@ header{
 
 // home 
 #home{
+    
 
     .container{
         margin-top: 6rem;
@@ -204,15 +205,62 @@ header{
         font-size: 1.7rem;
     }
     padding: 1.5rem;
-    background: lighten($header-color,2);
+    // background: lighten($header-color,2);
+    background-image: url('./background.jpeg');
+    background-blend-mode:darken;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    // background: rgba($header-color, 0.9);
     min-height: 90vh;
     font-weight: 400;
-    color:set-text-color($header-color);
+    color:set-text-color($home-color);
 
     // display: flex;
     // justify-content: center;
     // align-items: center;
     // flex-direction: column;
+
+    h1{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    p{
+        margin: 1rem;
+    }
+    .links{
+        margin: 1rem;
+        max-width: 100px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        grid-gap: 0.5rem;
+        i{
+            color:set-text-color($home-color);
+        }
+        
+    }
+}
+
+
+#about{
+    .container{
+        margin-top: 6rem;
+    }
+    .uname{
+        color:greenyellow;
+    }
+    p{
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+    padding: 1.5rem;
+    background: lighten($header-color,2);
+
+    min-height: 90vh;
+    font-weight: 400;
+    color:set-text-color($header-color);
+
 
     h1{
         font-size: 2rem;
