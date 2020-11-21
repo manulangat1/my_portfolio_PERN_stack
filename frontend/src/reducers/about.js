@@ -1,14 +1,14 @@
-import {FETCH_HOME } from '../actions/types'
+import {FETCH_ABOUT } from '../actions/types'
 
 const initialState = {
-    home:[]
+    about:[]
 }
 export default function(state=initialState,action){
     switch(action.type){
-        case FETCH_HOME:
+        case FETCH_ABOUT:
             return {
                 ...state,
-                home:action.payload
+                about:action.payload
             }
         default:
             return state

@@ -7,6 +7,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior:smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
 }
 main{
     min-height: calc(100vh - 70px);
@@ -39,9 +41,55 @@ header{
     background-color: $header-color;
     color:set-text-color($header-color);
     padding: 1rem;
+    border-bottom: $secondary-color 5px solid;
     .grids{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+}
+
+// home 
+#home{
+
+    .container{
+        margin-top: 6rem;
+    }
+    .uname{
+        color:greenyellow;
+    }
+    p{
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+    padding: 1.5rem;
+    background: lighten($header-color,2);
+    height: 90vh;
+    font-weight: 400;
+    color:set-text-color($header-color);
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+
+    h1{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    p{
+        margin: 1rem;
+    }
+    .links{
+        margin: 1rem;
+        max-width: 100px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        grid-gap: 0.5rem;
+        i{
+            color:set-text-color($header-color);
+        }
+        
     }
 }
 

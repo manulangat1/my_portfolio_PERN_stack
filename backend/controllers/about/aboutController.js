@@ -7,6 +7,10 @@ export default class AboutController {
         const details = {
             ...req.body
         }
+        const   abouts = await AboutService.getAbout()
+        if (abouts.length>0){
+            return responseHandler(res,'About Already exists',403,abouts)
+        }
         const about = await AboutService.createAbout(details);
         return responseHandler(res,'About created successfully',201,about);
         // return responseHandler(res,'Home Created',201,home);

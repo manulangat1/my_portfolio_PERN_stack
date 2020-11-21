@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { FETCH_HOME } from './types' 
+import { FETCH_ABOUT } from './types' 
 
 
-export const fetchHome = () => async(dispatch)  => {
+export const fetchAbout = () => async(dispatch)  => {
     try{
-        axios.get('/api/')
+        axios.get('/about/')
             .then ( res => {
                 dispatch({
-                    type:FETCH_HOME,
+                    type:FETCH_ABOUT,
                     payload:res.data.data
                 })
             })

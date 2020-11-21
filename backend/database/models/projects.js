@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Projects.init({
-    title: DataTypes.STRING
+    title: DataTypes.STRING,
+    content:DataTypes.STRING,
+    liveLink:DataTypes.STRING,
+    githubLink:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Projects',

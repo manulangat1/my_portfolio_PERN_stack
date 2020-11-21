@@ -7,6 +7,10 @@ export default class ProjectsController{
         const details = {
             ...req.body
         }
+        const   projects = await ProjectsService.loadProjects();
+        if (projects.length>0){
+            return responseHandler(res,'About Already exists',403,projects)
+        }
         const project = await ProjectsService.createProjects(details);
         return responseHandler(res,'Project created successfully',201,project);
     }

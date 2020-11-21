@@ -4,7 +4,8 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './components/site/Home'
 import About from './components/site/About'
-import Contact from './components/site/Contact'
+import Contact from './components/site/Contact';
+import Projects from './components/site/Projects';
 
 import { HashRouter as Router,Route, Switch } from 'react-router-dom' 
 
@@ -24,6 +25,7 @@ class App extends React.Component{
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/projects" component={Projects} />
                 </Switch>
               </main>
             

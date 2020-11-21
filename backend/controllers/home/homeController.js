@@ -3,10 +3,14 @@ import responseHandler from '../../helpers/responsehandler'
 
 export default class HomeController{
     static async createHome(req,res){
-        const { title } = req.body;
+        const { title,content } = req.body;
         const homeDetails = {
-            title
+            title,content
         };
+        const   homes = await HomeService.getHome()
+        if (homes.length>0){
+            return responseHandler(res,'About Already exists',403,homes)
+        }
         const home = await HomeService.createHome(homeDetails);
         return responseHandler(res,'Home Created',201,home);
     }
