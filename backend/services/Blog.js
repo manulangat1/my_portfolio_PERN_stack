@@ -10,4 +10,8 @@ export  default class BlogService{
         const blogs = await Blog.findAll();
         return blogs;
     }
+    static async loadBlogBySlugService(slug){
+        const blog = await Blog.findOne({where:{slug:slug}});
+        return blog;
+    }
 }

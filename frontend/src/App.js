@@ -8,6 +8,9 @@ import Contact from './components/site/Contact';
 import Projects from './components/site/Projects';
 import Blog from './components/site/Blog';
 import BlogItem from './components/site/BlogItem';
+import Login from './components/admin/Login';
+import Dashboard from './components/admin/Dashboard';
+import PrivateRoute from './components/common/PrivateRoute';
 
 import { HashRouter as Router,Route, Switch } from 'react-router-dom' 
 
@@ -30,6 +33,8 @@ class App extends React.Component{
                   <Route exact path="/projects" component={Projects} />
                   <Route exact path="/blog" component={Blog} />
                   <Route exact path="/blog/:slug/" component={BlogItem} />
+                  <Route exact path="/login/" component={Login} />
+                  <PrivateRoute exact path="/admin/" component={Dashboard} />
                 </Switch>
               </main>
             

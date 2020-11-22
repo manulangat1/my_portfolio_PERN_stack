@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom'
 
 
 class Footer extends React.Component{
@@ -7,7 +7,7 @@ class Footer extends React.Component{
         return(
             <footer>
                 <p>Kipchirchir Langat Emmanuel</p>
-                <p></p>
+                <p> <NavLink to="/login/">Admin login</NavLink> </p>
             </footer>
 
         )

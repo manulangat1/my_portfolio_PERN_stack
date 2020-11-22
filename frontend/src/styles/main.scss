@@ -11,6 +11,34 @@
     font-family: 'Nerko One', cursive;
     line-height: 1.5;
 }
+.primary-btn{
+  padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background-color: #f96816;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    width: 100%;
+    &:hover{
+        background-color: #ff7b39 ;
+    }
+}
+.form-control{
+  margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #181818;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
 main{
     min-height: calc(100vh - 70px);
 }
@@ -303,10 +331,21 @@ header{
     }
     
 }
-
+#login{
+  padding:2rem;
+  background:#f7f7f7;
+  // 
+  .form{
+    h1{
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    margin-top: 4rem;
+  }
+}
 //footer 
 footer{
-    height: 70px;
+    min-height: 70px;
     background-color: $header-color;
     color:set-text-color($header-color);
     padding: 2rem;

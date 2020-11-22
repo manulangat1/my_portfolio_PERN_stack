@@ -26,4 +26,8 @@ export default class BlogController{
         const blogs = await BlogService.loadBlogs();
         return  responseHandler(res,"Blogs loaded successfully",200,blogs)
     }
+    static async  findBlogBySlug(req,res){
+        const blogs = await BlogService.loadBlogBySlugService(req.params.slug);
+        return  responseHandler(res,"Blogs loaded successfully",200,blogs)
+    }
 }
