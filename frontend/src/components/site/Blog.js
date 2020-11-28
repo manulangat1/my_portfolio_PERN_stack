@@ -12,10 +12,9 @@ class Blogs extends React.Component{
         this.props.fetchBlogs()
     }
     render(){
-        const {blogs }=this.props
-        return(
-            <section id="projects" >
-                <div className="container">
+        const {blogs,isAuthenticated }=this.props
+        const guestDisplay = (
+            <div className="container">
                     <h1 className="heading-sm">Learn Javascript</h1>
                     <div className="gridp">
                     {
@@ -32,12 +31,21 @@ class Blogs extends React.Component{
                     }
                     </div>
                 </div>
+        )
+        const authDisplay = (
+            <h1>hello</h1>
+        )
+        
+        return(
+            <section id="projects" >
+                {isAuthenticated ? authDisplay : guestDisplay}
             </section>
 
         );
     };
 };
 const mapStateToProps = state  => ({
-    blogs:state.blogs.blogs
+    blogs:state.blogs.blogs,
+    isAuthenticated:state.auth.isAuthenticated
 })
 export default connect(mapStateToProps,{fetchBlogs})(withRouter(Blogs));

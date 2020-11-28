@@ -1,4 +1,4 @@
-import { FETCH_PROJECTS } from '../actions/types';
+import { FETCH_PROJECTS, ADD_PROJECTS } from '../actions/types';
 
 
 const intialState={
@@ -11,6 +11,11 @@ export default function(state=intialState,action){
             return{
                 ...state,
                 projects:action.payload
+            }
+        case ADD_PROJECTS:
+            return{
+                ...state,
+                projects:[action.payload,...state.projects]
             }
         default:
             return state

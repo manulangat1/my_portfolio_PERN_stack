@@ -51,4 +51,11 @@ export  default  class UserController {
             return responseHandler(res,err,500);
         }
     }
+    static async getUser(req,res){
+        const data = {
+            user:req.user,
+            token:req.token
+        }
+        return responseHandler(res,'User loaded',200,data)
+    }
 }

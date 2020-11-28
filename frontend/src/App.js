@@ -11,7 +11,7 @@ import BlogItem from './components/site/BlogItem';
 import Login from './components/admin/Login';
 import Dashboard from './components/admin/Dashboard';
 import PrivateRoute from './components/common/PrivateRoute';
-
+import { loadUser}  from './actions/auth';
 import { HashRouter as Router,Route, Switch } from 'react-router-dom' 
 
 
@@ -19,6 +19,9 @@ import store from './store'
 import { Provider } from 'react-redux'
 
 class App extends React.Component{
+  componentDidMount(){
+    store.dispatch(loadUser())
+  }
   render(){
     return(
       <Provider store={store}>

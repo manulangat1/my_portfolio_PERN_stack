@@ -35,7 +35,7 @@ const PORT = process.env.PORT
 
 // error middleware
 app.use((err, req, res, next) => {
-  handleError(err, res);
+  handleError(err, res,500);
 });
 
 app.listen(PORT, console.log(`Portfolio running on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.underline))

@@ -1,4 +1,4 @@
-import { FETCH_BLOG,FETCH_BLOG_BY_SLUG } from '../actions/types';
+import { FETCH_BLOG,FETCH_BLOG_BY_SLUG , ADD_BLOG} from '../actions/types';
 
 const intialState = {
     blogs:[],
@@ -11,6 +11,11 @@ export default function(state=intialState,action){
             return {
                 ...state,
                 blogs:action.payload
+            }
+        case ADD_BLOG:
+            return {
+                ...state,
+                blog:action.payload
             }
         case FETCH_BLOG_BY_SLUG:
             return {

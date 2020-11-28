@@ -11,6 +11,7 @@ export default class AuthMiddleware {
             const user = await User.findByPk(data);
             if (user){
                 req.user = user ;
+                req.token = token;
                 next();
             } else {
                 throw new ErrorHandler(404,'Invalid Token Provided');

@@ -1,17 +1,32 @@
 import React from 'react';
-import { fetchHome } from '../../actions/home';
+import { fetchHome,addHome } from '../../actions/home';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
 class Home extends React.Component{
+    state = {
+        title:'',
+        content:''
+    }
+    onChange = e => this.setState({[e.target.name]:e.target.value})
+    onSubmit = e => {
+        e.preventDefault()
+        const { title, content } = this.state
+        const newProj = {
+            title, content
+        }
+        console.log(newProj)
+        this.props.addHome(newProj)
+    }
     componentDidMount(){
         this.props.fetchHome()
     }
+
     render(){
-        return(
-            <section id="home">
-                <div className="container">
+        const {title,content} = this.state
+        const guestContent = (
+            <div className="container">
                     {
                        this.props.home && this.props.home.map(h => (
                             <div key={h.id}>
@@ -28,13 +43,32 @@ class Home extends React.Component{
                     
                     </div>
                 </div>
-                
+        )
+        const authDisplay = (
+            <div className="container">
+            <form  onSubmit={this.onSubmit}>
+                <div>
+                        <label>Title</label>
+                        <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} />
+                    </div>
+                   <div>
+                        <label>description</label>
+                        <input type="text" className="form-control" name="content" value={content} onChange={this.onChange} />
+                    </div>
+                    <input type="submit" value="Add Project" className="primary-btn"/>
+                </form>
+                </div>
+        )
+        return(
+            <section id="home">
+                { this.props.isAuthenticated ? authDisplay : guestContent}    
             </section>
 
         );
     };
 };
 const mapStateToProps = state => ({
-    home:state.home.home
+    home:state.home.home,
+    isAuthenticated:state.auth.isAuthenticated
 })
-export  default connect(mapStateToProps,{fetchHome}) (Home);
+export  default connect(mapStateToProps,{fetchHome,addHome}) (Home);
